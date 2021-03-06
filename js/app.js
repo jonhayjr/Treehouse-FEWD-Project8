@@ -71,6 +71,23 @@ gridContainer.addEventListener('click', e => {
     }
 });
 
+gridContainer.addEventListener('mouseover', e => {
+    // make sure the click is not on the gridContainer itself
+    const card = e.target.closest(".card");
+    if (e.target !== gridContainer) {
+    // select the card element based on its proximity to actual element clicked
+    card.classList.add('card-hover')
+    }
+});
+
+gridContainer.addEventListener('mouseout', e => {
+    // make sure the click is not on the gridContainer itself
+    const card = e.target.closest(".card");
+    if (e.target !== gridContainer) {
+    // select the card element based on its proximity to actual element clicked
+    card.classList.remove('card-hover')
+    }
+});
 
 modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
@@ -113,9 +130,11 @@ previous.addEventListener('click', () => {
 
 next.addEventListener('click', () => {
     const overlayElement = document.querySelector('.modal-content .text-container');
+    const cards = document.querySelectorAll('.card');
+    const maxIndex = cards.length - 1;
     const currentIndex = parseInt(overlayElement.getAttribute('data-index'));
     const nextIndex = currentIndex + 1;
-    if (nextIndex <= 11) {
+    if (nextIndex <= maxIndex) {
         displayModal(nextIndex);
     }
 })

@@ -73,7 +73,7 @@ input:focus {
     transition: all 0.10s ease-in-out;
 }
 
-.card:hover {
+.card-hover {
     box-shadow: -1px 10px 29px 0px rgba(0,0,0,0.8);
     transform: scale(1.1);
     background-color: white;
@@ -99,7 +99,7 @@ input:focus {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(100, 100, 100, 0.4) 
+    background: rgba(100, 100, 100, 0.4);
 }
 
 .modal {
@@ -144,7 +144,7 @@ input:focus {
 }
 
 .controls {
-    padding-top: 1rem;
+    padding-top: 2rem;
     display: flex;
     justify-content: space-around;
     align-content: center;
