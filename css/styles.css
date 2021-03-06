@@ -33,7 +33,23 @@ hr {
 .header {
     font-size: 13px;
     text-transform: uppercase;
-    padding: 0.5rem 0.5rem 0 0.5rem;
+    padding: 1rem;
+}
+
+.header__heading {
+    padding-bottom: 1rem;
+}
+
+.searchbar {
+    padding: 0.5rem;
+    width: 75%;
+    margin: auto;
+    border: 1px solid lightgray;
+    border-radius: 5px 5px;
+}
+
+.searchbar::placeholder {
+    font-family: 'Roboto', sans-serif;
 }
 
 /*Main*/
@@ -49,6 +65,7 @@ hr {
     border: solid 1px lightgray;
     border-radius: 10px 10px;
     padding-top: 1rem;
+    padding-bottom: 1rem;
     transition: all 0.10s ease-in-out;
 }
 
@@ -122,6 +139,18 @@ hr {
     padding-bottom: 1.5rem;
 }
 
+.controls {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.previous,
+.next {
+    padding: 0.3rem;
+    width: 100px;
+}
 
 /* ================================= 
     Media Queries
@@ -129,10 +158,13 @@ hr {
 @media (min-width: 768px){
 /* Header */
 .header {
-    text-align: left;
     padding-top: 2rem;
     font-size: 11px;
     padding-left: 1rem;
+}
+
+.header__heading {
+    text-align: left:
 }
 
 /* Main*/
