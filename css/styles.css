@@ -45,7 +45,7 @@ input:focus {
 }
 
 .searchbar {
-    padding: 0.5rem;
+    padding: 0.75rem;
     width: 75%;
     margin: auto;
     border: 1px solid lightgray;
@@ -54,6 +54,7 @@ input:focus {
 
 .searchbar::placeholder {
     font-family: 'Roboto', sans-serif;
+    font-size: 14px;
 }
 
 /*Main*/
