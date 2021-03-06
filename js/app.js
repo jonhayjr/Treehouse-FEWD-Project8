@@ -81,9 +81,12 @@ const searchbar = document.querySelector('.searchbar');
 function employeeSearch() {
     const cards = document.querySelectorAll('.card');
     const searchInput = searchbar.value.toLowerCase();
+    const searchInputLength = searchInput.length;
+
     cards.forEach(card => {
         let employeeName = card.getAttribute("data-employee").toLowerCase();
-        if (employeeName.indexOf(searchInput) >= 0) {
+        let subVal = employeeName.substr(0, searchInputLength).toLowerCase();
+        if (subVal === searchInput) {
             card.style.display = "";
         } else {
             card.style.display = "none";
