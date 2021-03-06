@@ -26,6 +26,10 @@ hr {
     border-color: rgba(128, 128, 128, 0.308);
 }
 
+input:focus {
+    outline-color: black;
+}
+
 /* ================================= 
     Base Layout Styles
 ==================================== */

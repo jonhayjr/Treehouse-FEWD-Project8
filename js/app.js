@@ -25,7 +25,7 @@ function displayEmployees(employeeData) {
         let picture = employee.picture;
  
     employeeHTML += `
-    <div class="card" data-index="${index}">
+    <div class="card" data-index="${index}" data-employee="${name.first} ${name.last}">
     <img class="avatar" src="${picture.large}" />
     <div class="text-container">
     <h2 class="name">${name.first} ${name.last}</h2>
@@ -74,3 +74,21 @@ gridContainer.addEventListener('click', e => {
 modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
     });
+
+/*Filter Employee Logic*/
+const searchbar = document.querySelector('.searchbar');
+
+function employeeSearch() {
+    const card = document.querySelectorAll('.card');
+    const searchInput = searchbar.value.toLowerCase();
+    for (let i= 0; i < card.length; i++) {
+        let employeeName = card[i].getAttribute("data-employee").toLowerCase();
+        if (employeeName.indexOf(searchInput) >= 0) {
+            card[i].style.display = "";
+        } else {
+            card[i].style.display = "none";
+        }
+    }
+}
+
+searchbar.addEventListener("keyup", employeeSearch);
