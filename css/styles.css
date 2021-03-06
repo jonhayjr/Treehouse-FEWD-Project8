@@ -131,12 +131,12 @@ body {
 }
 
 .name {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .email, 
 .address {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 }
@@ -148,14 +148,15 @@ body {
 }
 /* Main*/
 .grid-container {
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-gap: 15px;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
 
-.name {
-    font-size: 16px;
+.card {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 }
