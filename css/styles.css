@@ -49,7 +49,13 @@ hr {
     border: solid 1px lightgray;
     border-radius: 10px 10px;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    transition: all 0.10s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: -1px 10px 29px 0px rgba(0,0,0,0.8);
+    transform: scale(1.1);
+    background-color: white;
 }
 
 .avatar {
@@ -125,7 +131,7 @@ hr {
 .header {
     text-align: left;
     padding-top: 2rem;
-    font-size: 12px;
+    font-size: 11px;
     padding-left: 1rem;
 }
 
@@ -148,6 +154,7 @@ hr {
     flex-direction: column;
     justify-content: center;
     text-align: left;
+    width: 100px;
 }
 
 .card .avatar {
@@ -162,7 +169,7 @@ hr {
 
 .card .email, 
 .card .address {
-    font-size: 12px;
+    font-size: 11px;
 }
 
 /* Modal */
