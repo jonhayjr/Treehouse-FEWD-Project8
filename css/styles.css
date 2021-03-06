@@ -14,6 +14,17 @@ body {
     text-align: center;
 }
 
+.email,
+.address,
+.phone,
+.birthday,
+.street-address {
+    color: rgba(128, 128, 128, 0.664);
+}
+
+hr {
+    border-color: rgba(128, 128, 128, 0.308);
+}
 
 /* ================================= 
     Base Layout Styles
@@ -50,11 +61,6 @@ body {
     padding-bottom: 0.75rem;
 }
 
-.email,
-.address {
-    color: rgba(128, 128, 128, 0.664);
-}
-
 .email { 
     padding-bottom: 0.5rem;
 }
@@ -70,7 +76,7 @@ body {
 }
 
 .modal {
-    width: 375px;
+    width: 275px;
     margin: 15% auto auto;
     position: relative;
     text-align: center;
@@ -85,11 +91,31 @@ body {
     right: 15px;
     top: 5px;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
     }
 
 .hidden {
     display: none;
 }
+
+.modal .name {
+    font-size: 20px;
+}
+
+.modal .address {
+    padding-bottom: 2rem;
+}
+
+.modal .phone {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.modal .street-address {
+    padding-bottom: 1.5rem;
+}
+
 
 /* ================================= 
     Media Queries
@@ -117,28 +143,37 @@ body {
     min-height: 100%;
 }
 
-.text-container {
+.card .text-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
 }
 
-.avatar {
+.card .avatar {
     padding-left: 1rem;
     padding-right: 1rem;
     height: 100px;
 }
 
-.name {
+.card .name {
     font-size: 14px;
 }
 
-.email, 
-.address {
+.card .email, 
+.card .address {
     font-size: 12px;
 }
 
+/* Modal */
+.modal-close {
+    padding-top: 0.5rem;
+    right: 25px;
+}
+
+.modal {
+    width: 375px;
+}
 }
 
 @media (min-width: 1024px) {
