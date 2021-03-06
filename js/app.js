@@ -46,7 +46,7 @@ function displayModal(index) {
     let date = new Date(dob.date);
     const modalHTML = `
     <img class="avatar" src="${picture.large}" />
-    <div class="text-container">
+    <div class="text-container" data-index="${index}">
     <h2 class="name">${name.first} ${name.last}</h2>
     <p class="email">${email}</p>
     <p class="address">${city}</p>
@@ -71,9 +71,11 @@ gridContainer.addEventListener('click', e => {
     }
 });
 
+
 modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
     });
+
 
 /*Filter Employee Logic*/
 const searchbar = document.querySelector('.searchbar');
@@ -95,3 +97,25 @@ function employeeSearch() {
 }
 
 searchbar.addEventListener("keyup", employeeSearch);
+
+/* Overlay Navigation */
+const previous = document.querySelector('.previous');
+const next = document.querySelector('.next');
+
+previous.addEventListener('click', () => {
+    const overlayElement = document.querySelector('.modal-content .text-container');
+    const currentIndex = parseInt(overlayElement.getAttribute('data-index'));
+    const previousIndex = currentIndex - 1;
+    if (previousIndex >= 0) {
+        displayModal(previousIndex);
+    }
+})
+
+next.addEventListener('click', () => {
+    const overlayElement = document.querySelector('.modal-content .text-container');
+    const currentIndex = parseInt(overlayElement.getAttribute('data-index'));
+    const nextIndex = currentIndex + 1;
+    if (nextIndex <= 11) {
+        displayModal(nextIndex);
+    }
+})

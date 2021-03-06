@@ -198,6 +198,7 @@ input:focus {
 
 .card .name {
     font-size: 14px;
+    width: 150px;
 }
 
 .card .email, 
@@ -206,6 +207,9 @@ input:focus {
 }
 
 /* Modal */
+.overlay {
+    top: 15px;
+}
 .modal-close {
     padding-top: 0.5rem;
     right: 25px;
@@ -232,6 +236,11 @@ input:focus {
 .card {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
+}
+
+/*Overlay*/
+.overlay {
+    top: 25px;
 }
 
 }
