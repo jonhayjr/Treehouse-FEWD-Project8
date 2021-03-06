@@ -79,16 +79,16 @@ modalClose.addEventListener('click', () => {
 const searchbar = document.querySelector('.searchbar');
 
 function employeeSearch() {
-    const card = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll('.card');
     const searchInput = searchbar.value.toLowerCase();
-    for (let i= 0; i < card.length; i++) {
-        let employeeName = card[i].getAttribute("data-employee").toLowerCase();
+    cards.forEach(card => {
+        let employeeName = card.getAttribute("data-employee").toLowerCase();
         if (employeeName.indexOf(searchInput) >= 0) {
-            card[i].style.display = "";
+            card.style.display = "";
         } else {
-            card[i].style.display = "none";
+            card.style.display = "none";
         }
-    }
+    })
 }
 
 searchbar.addEventListener("keyup", employeeSearch);
