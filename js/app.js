@@ -48,9 +48,9 @@ function displayModal(index) {
     let { name, dob, phone, email, location: { city, street, state, postcode
     }, picture } = employees[index];
     let date = new Date(dob.date);
-    let dateMonth = date.getMonth().toString().padStart(2, "0");
-    let dateDay = date.getDate().toString().padStart(2, "0");
-    let dateYear = date.getFullYear().toString().substr(-2);
+    let dateMonth = date.getMonth() + 1;
+    let dateDay = date.getDate();
+    let dateYear = date.getFullYear();
     let phoneFormatted = phone.toString().replace('-', ' ');
     let stateAbbreviation = findStateAbbreviation(state);
 
