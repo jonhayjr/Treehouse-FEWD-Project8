@@ -26,7 +26,8 @@ hr {
     border-color: rgba(128, 128, 128, 0.308);
 }
 
-input:focus {
+input:focus,
+button:focus {
     outline-color: rgba(0, 0, 0, 0.438);
 }
 
@@ -115,9 +116,10 @@ input:focus {
     position: relative;
     text-align: center;
     background: #fff;
-    border: 1px solid #778;
+    border: 1px solid transparent;
     border-radius: 5px;
     padding: 30px 20px;
+    box-shadow: -1px 10px 29px 0px rgba(0,0,0,0.8);
     }
 
 .modal-close {
