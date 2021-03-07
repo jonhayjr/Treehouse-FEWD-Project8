@@ -11,7 +11,7 @@ fetch(urlAPI)
     .then(res => res.json())
     .then(res => res.results)
     .then(displayEmployees)
-    .catch(err => console.log(err))
+    .catch(err => displayError(err))
 
 function displayEmployees(employeeData) {
     employees = employeeData;
@@ -38,6 +38,11 @@ function displayEmployees(employeeData) {
     gridContainer.innerHTML = employeeHTML;
 }
 
+function displayError(err) {
+    let errorHTML = '<div class="error"><p>Sorry, something went wrong.  Please refresh the page and try again.</p><img src="img/error.png"></div>';
+    gridContainer.innerHTML = errorHTML;
+    console.log(err);
+}
 
 function displayModal(index) {
     // use object destructuring make our template literal cleaner
